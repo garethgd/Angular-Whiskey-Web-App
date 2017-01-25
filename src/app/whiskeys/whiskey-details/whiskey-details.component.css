@@ -1,0 +1,32 @@
+.desc {
+  width: 70%;
+  padding-left: 30px; }
+  .desc h1 {
+    line-height: 70px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: 20px;
+    font: 55px/24px 'Unica One', sans-serif;
+    text-transform: uppercase;
+    color: #c31;
+    margin: 20px 20px 30px; }
+    .desc h1 p + p {
+      margin-bottom: 20px; }
+
+.detail-img {
+  width: 400px;
+  max-width: 100%;
+  -moz-transition: all 4.3s;
+  -webkit-transition: all 4.3s;
+  transition: all 4.3s; }
+  .detail-img:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+
+img {
+  width: 400px;
+  float: left; }
+
+/*# sourceMappingURL=whiskey-details.css.map */

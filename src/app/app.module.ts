@@ -11,17 +11,20 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { WhiskeysModule } from './whiskeys/whiskeys.module';
 import { ActionsModule } from './actions/actions.module';
 import { AppRoutingModule } from './app.routing';
+
 import { LoginModalComponent } from './login-modal/login-modal.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
+    LoginModalComponent,
    
-    LoginModalComponent, 
     
   ],
   imports: [
@@ -30,9 +33,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppRoutingModule,
     HttpModule,
     AlertModule,
-    LayoutModule,
     WhiskeysModule,
     ActionsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
