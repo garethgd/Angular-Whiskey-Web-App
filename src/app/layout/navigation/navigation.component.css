@@ -9,6 +9,15 @@
 body {
   font-family: 'Raleway', sans-serif !important; }
 
+nav {
+  display: flex;
+  justify-content: space-between; }
+
+.active {
+  border: solid 1px white;
+  padding: 10px;
+  background: #fb9146; }
+
 .dark-bg {
   background-color: #303030; }
 
@@ -59,12 +68,6 @@ body {
   .header nav {
     padding: 1.2em 0 1.4em 0;
     text-align: center; }
-  .header .nav-left {
-    float: left;
-    text-align: left; }
-  .header .nav-right {
-    float: right;
-    text-align: right; }
   .header ul {
     list-style: none; }
     .header ul li {

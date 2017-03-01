@@ -124,7 +124,11 @@
   height: 1257px;
   width: 100%;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .hero .banner-text {
     font-family: 'Unica One', cursive;
     text-transform: uppercase;
@@ -134,10 +138,23 @@
     left: 0;
     right: 0;
     top: 78%; }
+    .hero .banner-text h1 {
+      font-size: 76px; }
+    .hero .banner-text h2 {
+      font-size: 41px;
+      /* font-family: 'Raleway', sans-serif !important; */
+      text-transform: none;
+      font-weight: lighter;
+      line-height: 196px; }
     .hero .banner-text p {
       width: 50%;
       margin: 0 auto;
-      letter-spacing: .3em; }
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-family: 'Raleway', sans-serif !important;
+      text-transform: none;
+      /* font-weight: bold; */
+      padding: 31px 0; }
 
 .list-software {
   padding: 40px;

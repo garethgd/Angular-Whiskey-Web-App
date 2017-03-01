@@ -156,20 +156,39 @@
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+   display: flex;
+  align-items: center;
+  justify-content: center;
   .banner-text {
     font-family: 'Unica One', cursive;
     text-transform: uppercase;
     text-align: center;
     color: #ffffff;
     margin-bottom: 1em;
-    
+   
     left: 0;
     right: 0;
     top: 78%;
+    h1{
+         font-size: 76px;
+    }
+    h2{
+         font-size: 41px;
+    /* font-family: 'Raleway', sans-serif !important; */
+    text-transform: none;
+    font-weight: lighter;
+    line-height: 196px;
+    }
     p {
-      width: 50%;
-      margin: 0 auto;
-      letter-spacing: .3em;
+     width: 50%;
+    margin: 0 auto;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif !important;
+    text-transform: none;
+    /* font-weight: bold; */
+    padding: 31px 0;
     }
   }
 }

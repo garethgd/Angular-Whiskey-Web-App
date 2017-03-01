@@ -9,8 +9,20 @@
 .left {
   float: left;
 }
+
 body {
-    font-family: 'Raleway', sans-serif !important;
+  font-family: 'Raleway', sans-serif !important;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  border: solid 1px white;
+  padding: 10px;
+  background: #fb9146;
 }
 
 //GLOBAL COLOURS
@@ -35,7 +47,6 @@ body {
     top: 8%;
   }
 }
-
 
 //HEADER
 .header {
@@ -77,14 +88,7 @@ body {
     padding: 1.2em 0 1.4em 0;
     text-align: center;
   }
-  .nav-left {
-    float: left;
-    text-align: left;
-  }
-  .nav-right {
-    float: right;
-    text-align: right;
-  }
+  
   ul {
     list-style: none;
     li {

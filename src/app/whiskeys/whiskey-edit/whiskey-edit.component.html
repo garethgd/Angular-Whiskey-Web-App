@@ -1,0 +1,24 @@
+<form name="editTeamName" *ngIf="selectedWhiskey">
+  <h2> Edit Whiskey </h2>
+
+  <div class ="form-group">
+    <label for="whiskeyName"> Whiskey Name </label>
+    <input type="text" [(ngModel)] = "selectedWhiskey.whiskeyName" class="form-control" name="whiskeyName" id="whiskeyName">
+
+  </div>
+
+  <div class ="form-group">
+    <label for="whiskeyName"> Whiskey Rating</label>
+    <input type="number" [(ngModel)] = "selectedWhiskey.whiskeyName" class="form-control" name="whiskeyRating" id="whiskeyRating">
+
+  </div>
+
+  <div class ="form-group">
+    <label for="whiskeyDescription"> Whiskey Description</label>
+    <input type="text" [(ngModel)] = "selectedWhiskey.whiskeyDesc" class="form-control" name="whiskeyPrice" id="whiskeyPrice">
+
+  </div>
+
+  <button type ="button" class="btn btn-primary"> </button> 
+
+</form>

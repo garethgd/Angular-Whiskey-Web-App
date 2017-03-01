@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { User } from '../../users/user-modal/user.model';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -9,7 +10,7 @@ import { User } from '../../users/user-modal/user.model';
 
 export class NavigationComponent {
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   @Input() whiskeyName: string;
 
@@ -24,6 +25,10 @@ export class NavigationComponent {
 
   searchWhiskey(whiskeyName) {
     this.onNameChanged.emit(whiskeyName)
+  }
+
+  isActive(url:string): boolean{
+    return url == this._router.url;
   }
 
   setWhiskeyName(newName: string) {

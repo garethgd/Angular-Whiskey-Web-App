@@ -35,7 +35,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AlertModule,
     WhiskeysModule,
     ActionsModule,
-    LayoutModule
+    LayoutModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

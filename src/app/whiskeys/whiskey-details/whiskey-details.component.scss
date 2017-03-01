@@ -1,5 +1,10 @@
+
+.container{
+  width: 50%;
+    display: inline-block;
+}
 .desc {
-  width: 70%;
+  
   padding-left: 30px;
   h1 {
     line-height: 70px;
@@ -18,7 +23,7 @@
 }
 
 .detail-img {
-  width: 400px;
+  width: 250px;
   max-width: 100%;
   -moz-transition: all 4.3s;
   -webkit-transition: all 4.3s;
@@ -31,6 +36,6 @@
 }
 
 img {
-  width: 400px;
+  width: 250px;
   float: left;
 }
