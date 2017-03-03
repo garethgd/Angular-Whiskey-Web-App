@@ -8,8 +8,8 @@
   </div>
 
   <div class ="form-group">
-    <label for="whiskeyName"> Whiskey Rating</label>
-    <input type="number" [(ngModel)] = "selectedWhiskey.whiskeyName" class="form-control" name="whiskeyRating" id="whiskeyRating">
+    <label for="whiskeyRating"> Whiskey Rating</label>
+    <input type="number" [(ngModel)] = "selectedWhiskey.rating" class="form-control" name="whiskeyRating" id="whiskeyRating">
 
   </div>
 
@@ -19,6 +19,6 @@
 
   </div>
 
-  <button type ="button" class="btn btn-primary"> </button> 
+  <button (click)="saveWhiskey()" type ="button" class="btn btn-primary">Submit </button> 
 
 </form>

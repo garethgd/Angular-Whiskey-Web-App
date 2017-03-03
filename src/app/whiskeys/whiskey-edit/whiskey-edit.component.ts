@@ -11,9 +11,13 @@ import { Whiskey } from '../../shared/whiskey/Whiskey';
 
 export class WhiskeyEditComponent implements OnInit {
 
- @Input() 
-selectedWhiskey : Whiskey;
-
+  @Input()
+  selectedWhiskey: Whiskey;
+  
+  saveWhiskey() {
+    this.selectedWhiskey = null;
+    console.log(this.selectedWhiskey);
+  }
   ngOnInit() {
   }
 

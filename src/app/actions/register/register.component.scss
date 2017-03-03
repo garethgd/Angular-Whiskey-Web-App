@@ -3,27 +3,30 @@
   justify-content: center;
   background: #333;
   padding: 50px;
-  height: 100%; }
-  .edit form {
-    width: 50%; }
-    .edit form h2 {
+  height: 100%;
+  form {
+    width: 50%;
+    h2 {
       font-weight: 400;
       text-transform: none;
       margin-bottom: 20px;
       margin-top: 0;
       font: 36px/24px 'Unica One', sans-serif;
       text-transform: uppercase;
-      color: #fb9146; }
-    .edit form label {
+      color: #fb9146;
+    }
+    label {
       font-weight: 400;
       text-transform: none;
       font: 16px 'Raleway', sans-serif;
-      color: white; }
-    .edit form input {
+      color: white;
+    }
+    input {
       font-weight: 400;
       text-transform: none;
-      font: 17px 'Raleway'; }
-    .edit form .btn-primary {
+      font: 17px 'Raleway';
+    }
+    .btn-primary {
       background-color: #333;
       border-color: #fb9146;
       font: 19px 'Unica One', sans-serif;
@@ -31,8 +34,10 @@
       text-transform: uppercase;
       width: 500px;
       color: white;
-      padding: 10px; }
-      .edit form .btn-primary:hover {
-        background-color: #fb9146; }
-
-/*# sourceMappingURL=register.component.css.map */
+      padding: 10px;
+      &:hover {
+        background-color: #fb9146;
+      }
+    }
+  }
+}

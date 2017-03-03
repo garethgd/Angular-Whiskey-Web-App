@@ -10,9 +10,19 @@ import { Whiskey } from '../../shared/whiskey/Whiskey';
 })
 
 export class WhiskeyDetailsComponent {
+
   @Input()
   selectedWhiskey: Whiskey;
+  rating: number;
+  ratings = new Array();
+
+  setRating() {
+    this.ratings = new Array(this.rating);
+  }
+
+
 }
+
 
 
 

@@ -12,6 +12,7 @@
   height: auto;
   .container-pad {
     padding: 2em 0;
+    padding-bottom: 0;
   }
   .overlay {
     h1 {
@@ -90,9 +91,11 @@
         text-transform: uppercase;
         margin: 0;
         padding: 1em 0 0 0;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 3px;
+        font-size: 20px;
+        font-family: 'Unica One', cursive;
+        text-transform: uppercase;
+        font-weight: lighter;
+        letter-spacing: 1px;
       }
     }
     img {
@@ -152,43 +155,44 @@
 //HERO
 .hero {
   background-image: url(../images/whiskey-drop.jpg);
-  height: 1257px;
+  height: auto;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  padding: 165px;
+  background-position-y: 30%;
   .banner-text {
     font-family: 'Unica One', cursive;
     text-transform: uppercase;
     text-align: center;
     color: #ffffff;
     margin-bottom: 1em;
-   
     left: 0;
     right: 0;
     top: 78%;
-    h1{
-         font-size: 76px;
+    h1 {
+      font-size: 76px;
     }
-    h2{
-         font-size: 41px;
-    /* font-family: 'Raleway', sans-serif !important; */
-    text-transform: none;
-    font-weight: lighter;
-    line-height: 196px;
+    h2 {
+      font-size: 41px;
+      /* font-family: 'Raleway', sans-serif !important; */
+      text-transform: uppercase;
+      font-weight: lighter;
+      line-height: 196px;
     }
     p {
-     width: 50%;
-    margin: 0 auto;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-family: 'Raleway', sans-serif !important;
-    text-transform: none;
-    /* font-weight: bold; */
-    padding: 31px 0;
+      width: 50%;
+      margin: 0 auto;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-family: 'Raleway', sans-serif !important;
+      text-transform: none;
+      /* font-weight: bold; */
+      padding: 31px 0;
     }
   }
 }

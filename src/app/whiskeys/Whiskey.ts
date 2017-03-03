@@ -5,9 +5,10 @@ export class Whiskey {
     distillery : string = "Jacksonville";
     desc : string = "An Oak that grew on the bank of a river was uprooted by a severe gale of wind, and thrown across the stream.";
     imgsrc : string = "images/clontarf-whiskey.jpg";
+    rating: number = 0;
 
 
-constructor(whiskeyName: string, price: number, origin : string, distillery : string, description : string, imgsrc : string)
+constructor(whiskeyName: string, price: number, origin : string, distillery : string, description : string, imgsrc : string, rating:number)
 {
     this.whiskeyName = whiskeyName;
     this.price = price;
@@ -15,6 +16,7 @@ constructor(whiskeyName: string, price: number, origin : string, distillery : st
     this.distillery = distillery;
     this.desc = description;
     this.imgsrc = imgsrc;
+    this.rating= rating;
 }
 
 }

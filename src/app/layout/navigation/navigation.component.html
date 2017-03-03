@@ -24,7 +24,7 @@
 
         <li>
 
-          <a href="features.html">Products</a>
+          <a [class.active] ="isActive('/products')" routerLink ="/products" href="features.html">Products</a>
 
         </li>
 
@@ -36,7 +36,7 @@
 
         <li style="list-style: none"></li>
 
-      </ul><a class="logo" [class.active] ="isActive('/')" routerLink ="/" >Eposible</a>
+      </ul><a class="logo" [class.active] ="isActive('/home')" routerLink ="/home" >Eposible</a>
 
       <ul class="nav-right">
 
@@ -57,6 +57,12 @@
     </nav>
 
   </div>
-
+<ul class="actions">
+  <li class="nav-item dropdown"  [class.active] ="isActive('/register')">
+ <span class= "ion-log-in"> </span>
+  <a routerLink="/register"  class="nav-link dropdown-toggle" data-toggle="dropdown">Register</a></li>
+  <li> <span class= "ion-lock-combination"> </span> <a routerLink="/login"  class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a></li>
+  
+</ul>
 </div>
 

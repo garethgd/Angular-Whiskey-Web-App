@@ -7,7 +7,8 @@
 .description {
   height: auto; }
   .description .container-pad {
-    padding: 2em 0; }
+    padding: 2em 0;
+    padding-bottom: 0; }
   .description .overlay h1 {
     display: inline-block;
     position: absolute;
@@ -73,9 +74,11 @@
         text-transform: uppercase;
         margin: 0;
         padding: 1em 0 0 0;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 3px; }
+        font-size: 20px;
+        font-family: 'Unica One', cursive;
+        text-transform: uppercase;
+        font-weight: lighter;
+        letter-spacing: 1px; }
     .description .third img {
       width: 100%; }
 
@@ -121,14 +124,16 @@
 
 .hero {
   background-image: url(../images/whiskey-drop.jpg);
-  height: 1257px;
+  height: auto;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 165px;
+  background-position-y: 30%; }
   .hero .banner-text {
     font-family: 'Unica One', cursive;
     text-transform: uppercase;
@@ -143,7 +148,7 @@
     .hero .banner-text h2 {
       font-size: 41px;
       /* font-family: 'Raleway', sans-serif !important; */
-      text-transform: none;
+      text-transform: uppercase;
       font-weight: lighter;
       line-height: 196px; }
     .hero .banner-text p {

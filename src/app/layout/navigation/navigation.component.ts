@@ -1,6 +1,8 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { User } from '../../users/user-modal/user.model';
-import {Router} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
+
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',

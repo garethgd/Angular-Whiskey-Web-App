@@ -1,9 +1,14 @@
-<div class= "container" *ngIf ="selectedWhiskey" >
-<div class = "detail-img">
-<img  src="{{ selectedWhiskey.imgsrc }}">
-</div>
-<div class ="desc">
-<h1> {{selectedWhiskey.whiskeyName}} </h1>
-<p> {{selectedWhiskey.desc}} </p>
-</div>
+<div class="container" *ngIf="selectedWhiskey">
+  <div class="detail-img">
+    <img src="{{ selectedWhiskey.imgsrc }}">
   </div>
+  <div class="desc">
+    <h1> {{selectedWhiskey.whiskeyName}} </h1>
+    <h2> {{selectedWhiskey.whiskeyPrice}} </h2>
+    <p> {{selectedWhiskey.desc}} </p>
+    <p>{{selectedWhiskey.rating}}</p>
+    <div *ngFor="let i of selectedWhiskey.rating ">
+      <span  class="rating ion-ios-star"> </span>
+    </div>
+  </div>
+</div>

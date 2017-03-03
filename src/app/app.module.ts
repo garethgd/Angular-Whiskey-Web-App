@@ -5,16 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './layout/header/header.component';
+
 import { LayoutModule } from './layout/layout.module';
 import { FooterComponent } from './layout/footer/footer.component';
 import { WhiskeysModule } from './whiskeys/whiskeys.module';
 import { ActionsModule } from './actions/actions.module';
 import { AppRoutingModule } from './app.routing';
+import { ActionsRoutingModule } from './actions/actions.routing';
 
 import { LoginModalComponent } from './login-modal/login-modal.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
 
 
 
@@ -23,7 +26,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
   declarations: [
     AppComponent,
     NotFoundComponent,
-    LoginModalComponent,
+    HomeComponent,
+    ProductsComponent,
+   
    
     
   ],
@@ -36,8 +41,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     WhiskeysModule,
     ActionsModule,
     LayoutModule,
-    FormsModule
-
+    ActionsRoutingModule,
+    RouterModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,9 +20,17 @@ nav {
 }
 
 .active {
-  border: solid 1px white;
+  border-bottom: solid 1px #fb9146;
   padding: 10px;
-  background: #fb9146;
+  &:after {
+    // content: '';
+    //   display: block;
+    //   position: absolute;
+    //   top: 0;
+    //   width: 50%;
+    //   left: 25%;
+    //   border-top: 1px solid red;
+  }
 }
 
 //GLOBAL COLOURS
@@ -53,11 +61,12 @@ nav {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-family: 'Raleway', sans-serif !important;
+  font-family: 'Raleway', sans-serif ;
+    padding-bottom: 5px;
   font-size: 12px;
   .nav-contact {
     float: left;
-    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Raleway', sans-serif ;
     padding: 1.2em 0 1.4em 0;
     li: nth-child(1) {
       text-decoration: none;
@@ -75,7 +84,7 @@ nav {
   a.logo {
     text-decoration: none;
     color: #ffffff;
-    padding: 0 2em;
+    padding-top: 0;
     font-weight: 800;
     font-size: 1em;
     font-family: 'Raleway', sans-serif !important;
@@ -88,7 +97,6 @@ nav {
     padding: 1.2em 0 1.4em 0;
     text-align: center;
   }
-  
   ul {
     list-style: none;
     li {
@@ -97,13 +105,38 @@ nav {
       a {
         text-decoration: none;
         color: #ffffff;
-        padding: 0 2em;
+        padding: 10px 2em;
         font-weight: 800;
         font-size: 0.9em;
         &:hover {
           color: #fb9146;
           cursor: pointer;
         }
+      }
+    }
+  }
+}
+
+.header {
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    .active {
+      padding: 0 0px;
+      margin-bottom: 5px;
+      margin-right: 15px;
+    }
+    li {
+      display: block;
+      margin-bottom: 5px;
+      a {
+        padding-left: 0;
+      }
+      span {
+        font-size: 20px;
+        vertical-align: middle;
+        color: #fb9146;
       }
     }
   }

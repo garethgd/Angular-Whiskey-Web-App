@@ -14,9 +14,8 @@ nav {
   justify-content: space-between; }
 
 .active {
-  border: solid 1px white;
-  padding: 10px;
-  background: #fb9146; }
+  border-bottom: solid 1px #fb9146;
+  padding: 10px; }
 
 .dark-bg {
   background-color: #303030; }
@@ -39,11 +38,12 @@ nav {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-family: 'Raleway', sans-serif !important;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 5px;
   font-size: 12px; }
   .header .nav-contact {
     float: left;
-    font-family: 'Raleway', sans-serif !important;
+    font-family: "Raleway", sans-serif;
     padding: 1.2em 0 1.4em 0;
     li: nth-child(1);
       li-text-decoration: none;
@@ -58,7 +58,7 @@ nav {
   .header a.logo {
     text-decoration: none;
     color: #ffffff;
-    padding: 0 2em;
+    padding-top: 0;
     font-weight: 800;
     font-size: 1em;
     font-family: 'Raleway', sans-serif !important; }
@@ -76,11 +76,29 @@ nav {
       .header ul li a {
         text-decoration: none;
         color: #ffffff;
-        padding: 0 2em;
+        padding: 10px 2em;
         font-weight: 800;
         font-size: 0.9em; }
         .header ul li a:hover {
           color: #fb9146;
           cursor: pointer; }
+
+.header .actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0; }
+  .header .actions .active {
+    padding: 0 0px;
+    margin-bottom: 5px;
+    margin-right: 15px; }
+  .header .actions li {
+    display: block;
+    margin-bottom: 5px; }
+    .header .actions li a {
+      padding-left: 0; }
+    .header .actions li span {
+      font-size: 20px;
+      vertical-align: middle;
+      color: #fb9146; }
 
 /*# sourceMappingURL=navigation.component.css.map */
