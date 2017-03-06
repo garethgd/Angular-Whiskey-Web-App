@@ -19,17 +19,49 @@
       text-transform: none;
       font: 16px 'Raleway', sans-serif;
       color: white; }
+    .edit form .alert-danger {
+      color: #fb9146;
+      background-color: transparent;
+      /* padding-top: 36px; */
+      font: 17px 'Unica One', sans-serif;
+      text-transform: uppercase;
+      padding-left: 10px;
+      margin: 15px;
+      font-family: 20px "Unica One", sans-serif;
+      margin-left: 0;
+      padding: 0;
+      border: none;
+      /* border-color: #ebccd1; */ }
     .edit form input {
       font-weight: 400;
       text-transform: none;
-      font: 17px 'Raleway'; }
+      color: white;
+      font: 17px 'Raleway';
+      border: solid 1px #fb9146;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+      .edit form input.ng-touched {
+        border: 3px solid #FF9347; }
+      .edit form input.ng-dirty.ng-valid {
+        border: 1px solid #24CC7C; }
+      .edit form input.ng-dirty.ng-invalid {
+        border: 3px solid #e65b41; }
+    .edit form select {
+      border: solid 1px #fb9146; }
+      .edit form select.ng-dirty.ng-valid {
+        border: 1px solid #24CC7C; }
+      .edit form select.ng-dirty.ng-invalid {
+        border: 1px solid red; }
+      .edit form select.ng-touched {
+        border: 3px solid #FF9347; }
+    .edit form .form-control {
+      background-color: #333; }
     .edit form .btn-primary {
       background-color: #333;
       border-color: #fb9146;
       font: 19px 'Unica One', sans-serif;
       margin-top: 20px;
       text-transform: uppercase;
-      width: 500px;
+      width: 100%;
       color: white;
       padding: 10px; }
       .edit form .btn-primary:hover {

@@ -21,10 +21,52 @@
       font: 16px 'Raleway', sans-serif;
       color: white;
     }
+    .alert-danger {
+        color: #fb9146;
+        background-color: transparent;
+        /* padding-top: 36px; */
+        font: 17px 'Unica One', sans-serif;
+        text-transform: uppercase;
+        padding-left: 10px;
+        margin: 15px;
+        font-family: 20px'Unica One', sans-serif;
+        margin-left: 0;
+        padding: 0;
+        border:none;
+        /* border-color: #ebccd1; */
+      }
     input {
       font-weight: 400;
       text-transform: none;
+      color: white;
       font: 17px 'Raleway';
+      border: solid 1px #fb9146;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+      
+      &.ng-touched {
+        border: 3px solid #FF9347;
+      }
+      &.ng-dirty.ng-valid {
+        border: 1px solid #24CC7C;
+      }
+      &.ng-dirty.ng-invalid {
+        border: 3px solid #e65b41;
+      }
+    }
+    select {
+      border: solid 1px #fb9146;
+      &.ng-dirty.ng-valid {
+        border: 1px solid #24CC7C;
+      }
+      &.ng-dirty.ng-invalid {
+        border: 1px solid red;
+      }
+      &.ng-touched {
+        border: 3px solid #FF9347;
+      }
+    }
+    .form-control {
+      background-color: #333;
     }
     .btn-primary {
       background-color: #333;
@@ -32,7 +74,7 @@
       font: 19px 'Unica One', sans-serif;
       margin-top: 20px;
       text-transform: uppercase;
-      width: 500px;
+      width: 100%;
       color: white;
       padding: 10px;
       &:hover {

@@ -1,29 +1,96 @@
 <div class="edit">
-  <form name="editTeamName">
+  <form #registrationForm="ngForm" name="editWhiskey">
     <h2> Register </h2>
-    <div class="form-group">
+    
+    <div 
+    class="form-group"  >
+  
       <label for="firstName"> First Name </label>
-      <input type="text" class="form-control" name="firstName" id="firstName">
+      <input type="text" 
+             class="form-control"     
+             name="firstName" 
+              id="firstName"
+            
+             [(ngModel)] = "registrationViewModel.firstName"
+             required
+             />
+              <div *ngIf="formErrors.firstName" class="alert alert-danger">
+              {{formErrors.firstName}}
     </div>
-    <div class="form-group">
+    </div>
+    <div class="form-group has-danger"
+   >
       <label for="lastName"> Last Name </label>
-      <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Enter First Name">
+      <input type="text"
+       class="form-control"
+             id="lastName" 
+             name="lastName"
+            [(ngModel)] = "registrationViewModel.lastName" 
+            required   
+            placeholder="Enter Last Name">
+
+          <div *ngIf="formErrors.lastName" class="alert alert-danger">
+           {{formErrors.lastName}}
+        </div>
     </div>
-    <div class="form-group">
+    <div class="form-group"
+       >
       <label for="email"> Email </label>
-      <input type="email" class="form-control" name="email" id="email" placeholder="Enter First Name">
+      <input type="email" 
+             class="form-control"   
+             id="email"         
+             name="email" 
+            [(ngModel)] = "registrationViewModel.email" 
+             required  
+             placeholder="Enter Email">
+
+          <div *ngIf="formErrors.email" class="alert alert-danger">
+           {{formErrors.email}}
+        </div>
     </div>
-    <div class="form-group">
+    <div class="form-group"
+      >
       <label for="address"> Address </label>
-      <input type="address" class="form-control" name="address" id="address">
+      <input type="address" 
+            class="form-control"
+                 
+             id="address"
+           
+             name="address" 
+             [(ngModel)] = "registrationViewModel.address"
+              required 
+           >
+        <div *ngIf="formErrors.address" class="alert alert-danger">
+           {{formErrors.address}}
+        </div>      
     </div>
-    <div class="form-group">
+    <div class="form-group"
+        >
       <label for="dob"> Date of Birth </label>
-      <input type="dob" class="form-control" name="dob" id="dob">
+      <input type="date"
+              class="form-control"
+             
+              id="dob"  
+            
+             name="dob" 
+             [(ngModel)] = "registrationViewModel.dob" 
+             name="dob" 
+             required
+             >
+             <div *ngIf="formErrors.dob" class="alert alert-danger">
+           {{formErrors.dob}}
+        </div> 
     </div>
-    <div class="form-group">
-      <label for="dob"> Country </label>
-      <select class="form-control" name="dob" id="dob">
+    <div class="form-group" >
+      <label for="country"> Country </label>
+      <select  class="form-control"
+            
+             id="country"
+             #country="ngModel"   
+             name="country"
+            [(ngModel)] = "registrationViewModel.country" 
+             required 
+        >
         <option value="1">
             Ireland
         </option>
@@ -36,7 +103,26 @@
             Wales
         </option>
     </select>
+      <div *ngIf="formErrors.country" class="alert alert-danger">
+           {{formErrors.country}}
+        </div> 
     </div>
-    <button type="button" class="btn btn-primary">Submit </button>
+
+    
+    <div class="form-group"
+    >
+      <label  for = "password"> Password </label>
+        <input     
+             type="password"
+             class="form-control"    
+             id="password"   
+             name="password"
+            [(ngModel)] = "registrationViewModel.password" 
+         />
+   <div *ngIf="formErrors.password" class="alert alert-danger">
+           {{formErrors.password}}
+        </div> 
+    </div>
+    <button type="button" class="btn btn-primary" [disabled] = "registrationForm.form.invalid" >Submit </button>
   </form>
 </div>

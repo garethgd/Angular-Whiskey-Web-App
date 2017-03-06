@@ -1,29 +1,40 @@
 form {
   width: 35%;
-  display: inline-block;
+    display: inline-block;
+    float: right;
+
+    color:black;
   h2 {
     font-weight: 400;
-    text-transform: none;
-    margin-bottom: 20px;
-    font: 36px/24px 'Unica One', sans-serif;
-    text-transform: uppercase;
-    color: #c31;
+      text-transform: none;
+      margin-bottom: 20px;
+      margin-top: 0;
+      font: 36px/24px 'Unica One', sans-serif;
+      text-transform: uppercase;
+      color: #303030;
   }
   label {
-    font-weight: 400;
-    text-transform: none;
-    font: 21px 'Unica One', sans-serif;
-    color: #c31;
+   font-weight: 400;
+      text-transform: none;
+      font: 16px 'Raleway', sans-serif;
+      color: white;
   }
   input {
     font-weight: 400;
-    text-transform: none;
-    font: 17px 'Unica One';
+      text-transform: none;
+      font: 17px 'Raleway';
   }
   .btn-primary {
-    background-color: #c31;
-    border-color: #c31;
-    font: 19px 'Unica One', sans-serif;
-    text-transform: uppercase;
+    background-color: #333;
+      border-color: #fb9146;
+      font: 19px 'Unica One', sans-serif;
+      margin-top: 20px;
+      text-transform: uppercase;
+      width: 100%;
+      color: white;
+      padding: 10px;
+      &:hover {
+        background-color: #fb9146;
+      }
   }
 }
