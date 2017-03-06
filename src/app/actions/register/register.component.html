@@ -1,5 +1,5 @@
 <div class="edit">
-  <form #registrationForm="ngForm" name="editWhiskey">
+  <form [formGroup]="registrationForm" name="editWhiskey">
     <h2> Register </h2>
     
     <div 
@@ -8,11 +8,9 @@
       <label for="firstName"> First Name </label>
       <input type="text" 
              class="form-control"     
-             name="firstName" 
-              id="firstName"
-            
-             [(ngModel)] = "registrationViewModel.firstName"
-             required
+             formControlName="firstName" 
+              id="firstName"      
+              required
              />
               <div *ngIf="formErrors.firstName" class="alert alert-danger">
               {{formErrors.firstName}}
@@ -24,9 +22,8 @@
       <input type="text"
        class="form-control"
              id="lastName" 
-             name="lastName"
-            [(ngModel)] = "registrationViewModel.lastName" 
-            required   
+             formControlName="lastName"
+             required   
             placeholder="Enter Last Name">
 
           <div *ngIf="formErrors.lastName" class="alert alert-danger">
@@ -39,8 +36,7 @@
       <input type="email" 
              class="form-control"   
              id="email"         
-             name="email" 
-            [(ngModel)] = "registrationViewModel.email" 
+             formControlName="email" 
              required  
              placeholder="Enter Email">
 
@@ -52,13 +48,10 @@
       >
       <label for="address"> Address </label>
       <input type="address" 
-            class="form-control"
-                 
+            class="form-control"       
              id="address"
-           
-             name="address" 
-             [(ngModel)] = "registrationViewModel.address"
-              required 
+             formControlName="address" 
+            required 
            >
         <div *ngIf="formErrors.address" class="alert alert-danger">
            {{formErrors.address}}
@@ -68,13 +61,9 @@
         >
       <label for="dob"> Date of Birth </label>
       <input type="date"
-              class="form-control"
-             
-              id="dob"  
-            
-             name="dob" 
-             [(ngModel)] = "registrationViewModel.dob" 
-             name="dob" 
+              class="form-control"     
+              id="dob"   
+             formControlName="dob" 
              required
              >
              <div *ngIf="formErrors.dob" class="alert alert-danger">
@@ -84,11 +73,9 @@
     <div class="form-group" >
       <label for="country"> Country </label>
       <select  class="form-control"
-            
+             type="text"
              id="country"
-             #country="ngModel"   
-             name="country"
-            [(ngModel)] = "registrationViewModel.country" 
+             formControlName="country"
              required 
         >
         <option value="1">
@@ -116,13 +103,13 @@
              type="password"
              class="form-control"    
              id="password"   
-             name="password"
-            [(ngModel)] = "registrationViewModel.password" 
+             formControlName="password"
+             required
          />
    <div *ngIf="formErrors.password" class="alert alert-danger">
            {{formErrors.password}}
         </div> 
     </div>
-    <button type="button" class="btn btn-primary" [disabled] = "registrationForm.form.invalid" >Submit </button>
+    <button type="button" class="btn btn-primary" [disabled] = "registrationForm.invalid" (click)="submit()" >Submit </button>
   </form>
 </div>

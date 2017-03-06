@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms'
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
 import { RegistrationViewModel } from './registrationViewModel';
 
 
@@ -10,99 +10,106 @@ import { RegistrationViewModel } from './registrationViewModel';
 })
 
 
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
 
-  @ViewChild("registrationForm") registrationForm: NgForm
-
+  registrationForm: FormGroup;
   registrationViewModel: RegistrationViewModel
 
-  ngAfterViewChecked(){
-   this.formChanged();
+
+  constructor(
+    private fb: FormBuilder
+
+  ) {
+
+    this.registrationViewModel = new RegistrationViewModel();
   }
 
+  ngOnInit() {
+    this.buildForm();
+  }
+  submit() {
+    this.registrationViewModel = this.registrationForm.value;
+    console.log(JSON.stringify(this.registrationViewModel));
+  }
+  private buildForm() {
+    this.registrationForm = this.fb.group({
+      'firstName': ['', [Validators.required]],
+      'lastName': ['', [Validators.required]],
+      'email': ['', [Validators.required]],
+      'address': ['', [Validators.required]],
+      'dob': ['', [Validators.required]],
+      'country': ['', [Validators.required]],
+      'password': ['', [Validators.required]],
 
-  constructor() {
-    this.registrationViewModel = new RegistrationViewModel();
-   }
-   private formChanged()
-   {
-     if(this.registrationForm)
-     {
-       this.registrationForm.valueChanges.subscribe(data => this.onValueChanged(data))
-     }
-   }
+    })
+    this.registrationForm.valueChanges.subscribe(data => this.onValueChanged(data));
+    this.onValueChanged();
+  }
+  private onValueChanged(data?: any) {
+    if (!this.registrationForm) { return; }
 
-   private onValueChanged(data? : any)
-   {
-    if(this.registrationForm)
-    {
-      const form = this.registrationForm.form;
+    for (const property in this.formErrors) {
+      this.formErrors[property] = '';
+      const control = this.registrationForm.get(property);
 
-      for(const property in this.formErrors)
-      {
-        this.formErrors[property] = '';
-        const control = form.get(property);
+      //Control is current form input 
+      if (control && control.dirty && control.invalid) {
+        const messages = this.validateMessages[property]
 
-        //Control is current form input 
-        if (control && control.dirty && control.invalid)
-        {
-          const messages = this.validateMessages[property]
-
-          for(const key in control.errors)
-          {
-            this.formErrors[property] += messages[key] + ' ';
-          }
+        for (const key in control.errors) {
+          this.formErrors[property] += messages[key] + ' ';
         }
       }
     }
-   }
-
-   private formErrors = {
-     'firstName': '',
-     'lastName': '',
-     'email': '',
-     'address': '',
-     'dob': '',
-     'country': '',
-     'password' : ''
-   };
-
-   private validateMessages ={
-     'firstName' : {
-       'required' : 'First Name is Required.'
-
-     },
-     'lastName' : {
-       'required' : 'Last Name is Required.'
-
-     },
-     'email' : {
-       'required' : 'Email is Required.'
-
-     },
-     'address' : {
-       'required' : 'Address is Required.'
-
-     },
-     'dob' : {
-       'required' : 'Date of Birth is Required.'
-
-     },
-     'country' : {
-       'required' : 'Country is Required.'
-
-     },
-     'password' : {
-       'required' : 'Password is Required.'
-
-     }
-   }
+  }
 
 
-// registerUser(fname, lname, email, phone , country , address, billingAddress, sameAddress ){
-//     if(sameAddress == true)
-//     {
-//       billingAddress == sameAddress;
-//     }
-//   }
+  private formErrors = {
+    'firstName': '',
+    'lastName': '',
+    'email': '',
+    'address': '',
+    'dob': '',
+    'country': '',
+    'password': ''
+  };
+
+  private validateMessages = {
+    'firstName': {
+      'required': 'First Name is Required.'
+
+    },
+    'lastName': {
+      'required': 'Last Name is Required.'
+
+    },
+    'email': {
+      'required': 'Email is Required.'
+
+    },
+    'address': {
+      'required': 'Address is Required.'
+
+    },
+    'dob': {
+      'required': 'Date of Birth is Required.'
+
+    },
+    'country': {
+      'required': 'Country is Required.'
+
+    },
+    'password': {
+      'required': 'Password is Required.'
+
+    }
+  }
+
+
+  // registerUser(fname, lname, email, phone , country , address, billingAddress, sameAddress ){
+  //     if(sameAddress == true)
+  //     {
+  //       billingAddress == sameAddress;
+  //     }
+  //   }
 }
