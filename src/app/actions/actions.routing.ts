@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
-
+import { EmailComponent } from './email/email.component';
 const routes: Routes = [
 
     
     {
         path: 'profile',
         component: ProfileComponent
+    },
+    {
+        path: 'login-email',
+        component: EmailComponent
     },
     {
 

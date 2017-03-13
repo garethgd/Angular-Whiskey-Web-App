@@ -1,13 +1,14 @@
 <div class="edit">
-  <form [formGroup]="registrationForm" name="editWhiskey">
+  <form #formData='ngForm' [formGroup]="registrationForm" (ngSubmit)="onSubmit(formData)">
     <h2> Register </h2>
-    
+    <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
     <div 
     class="form-group"  >
   
       <label for="firstName"> First Name </label>
       <input type="text" 
              class="form-control"     
+             (ngModel)="firstName"
              formControlName="firstName" 
               id="firstName"      
               required
@@ -22,6 +23,7 @@
       <input type="text"
        class="form-control"
              id="lastName" 
+               (ngModel)="lastName"
              formControlName="lastName"
              required   
             placeholder="Enter Last Name">
@@ -36,6 +38,7 @@
       <input type="email" 
              class="form-control"   
              id="email"         
+              (ngModel)="email"
              formControlName="email" 
              required  
              placeholder="Enter Email">
@@ -50,6 +53,7 @@
       <input type="address" 
             class="form-control"       
              id="address"
+               (ngModel)="address"
              formControlName="address" 
             required 
            >
@@ -61,6 +65,7 @@
         >
       <label for="dob"> Date of Birth </label>
       <input type="date"
+        (ngModel)="dob"
               class="form-control"     
               id="dob"   
              formControlName="dob" 
@@ -74,6 +79,7 @@
       <label for="country"> Country </label>
       <select  class="form-control"
              type="text"
+              (ngModel)="country"
              id="country"
              formControlName="country"
              required 
@@ -103,6 +109,7 @@
              type="password"
              class="form-control"    
              id="password"   
+                (ngModel)="password"
              formControlName="password"
              required
          />
@@ -110,6 +117,11 @@
            {{formErrors.password}}
         </div> 
     </div>
-    <button type="button" class="btn btn-primary" [disabled] = "registrationForm.invalid" (click)="submit()" >Submit </button>
+    <button type="button" class="btn btn-primary" [disabled] = "registrationForm.invalid" (click)="onSubmit(formData)" >Create my account </button>
   </form>
 </div>
+
+
+
+
+

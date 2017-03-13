@@ -1,0 +1,14 @@
+<div class="form-container" id="toolbar">
+    <header [@fallIn]="state">
+    
+    </header>
+      
+    <div id="page" [@moveInLeft]="state">
+      <button (click)="logout()" class="basic-btn">Logout</button>
+       <span class="ion-ios-world"> </span>
+      <h2>Hey {{ name.auth.displayName }}! Welcome to your Whiskey Dashboard</h2>
+      
+      <img src="assets/images/filler.png" />
+    </div>
+    
+</div>

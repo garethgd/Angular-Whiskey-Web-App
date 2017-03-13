@@ -4,8 +4,27 @@
   background: #333;
   padding: 50px;
   height: 100%;
+  a {
+     color: #ECECEC;
+    margin-bottom: 25px;
+  }
+  #goback {
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font: 22px/24px 'Unica One', sans-serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #ECECEC;
+  }
+  span {
+    color: #fb9146;
+    font-size: 36px;
+    vertical-align: middle;
+  }
   form {
-    width: 50%;
+    width: 25%;
     h2 {
       font-weight: 400;
       text-transform: none;
@@ -45,7 +64,7 @@
       &.ng-touched {
         border: 3px solid #FF9347;
       }
-       &.ng-dirty.ng-valid {
+      &.ng-dirty.ng-valid {
         border: 1px solid #24CC7C;
       }
       &.ng-dirty {

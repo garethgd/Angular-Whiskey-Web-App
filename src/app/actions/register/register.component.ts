@@ -1,32 +1,63 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
 import { RegistrationViewModel } from './registrationViewModel';
-
+import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
+import { Router } from '@angular/router';
+import { moveIn, fallIn } from '../../router.animations';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  animations: [moveIn(), fallIn()],
+  host: {'[@moveIn]': ''}
 })
 
 
 export class RegisterComponent implements OnInit {
 
   registrationForm: FormGroup;
-  registrationViewModel: RegistrationViewModel
+  registrationViewModel: RegistrationViewModel;
+  
 
+    state: string ='';
+    error: any;
 
   constructor(
-    private fb: FormBuilder
-
+    private fb: FormBuilder,
+    public af: AngularFire,
+    private router: Router
   ) {
-
+    this.af.auth.subscribe(auth => { 
+      if(auth) {
+        this.router.navigateByUrl('/members');
+      }
+    });
     this.registrationViewModel = new RegistrationViewModel();
   }
+
 
   ngOnInit() {
     this.buildForm();
   }
+onSubmit(formData) {
+    if(formData.valid) {
+      console.log(formData.value);
+      this.af.auth.createUser({
+        email: formData.value.email,
+        password: formData.value.password
+      }).then(
+        (success) => {
+      
+        this.router.navigate(['/members'])
+      }).catch(
+        (err) => {
+      
+        this.error = err;
+      })
+    }
+  }
+
   submit() {
     this.registrationViewModel = this.registrationForm.value;
     console.log(JSON.stringify(this.registrationViewModel));
@@ -62,8 +93,6 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
-
-
   private formErrors = {
     'firstName': '',
     'lastName': '',
@@ -73,7 +102,6 @@ export class RegisterComponent implements OnInit {
     'country': '',
     'password': ''
   };
-
   private validateMessages = {
     'firstName': {
       'required': 'First Name is Required.'
@@ -105,11 +133,4 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-
-  // registerUser(fname, lname, email, phone , country , address, billingAddress, sameAddress ){
-  //     if(sameAddress == true)
-  //     {
-  //       billingAddress == sameAddress;
-  //     }
-  //   }
 }

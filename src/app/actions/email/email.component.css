@@ -4,8 +4,24 @@
   background: #333;
   padding: 50px;
   height: 100%; }
+  .edit a {
+    color: #ECECEC;
+    margin-bottom: 25px; }
+  .edit #goback {
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font: 22px/24px 'Unica One', sans-serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #ECECEC; }
+  .edit span {
+    color: #fb9146;
+    font-size: 36px;
+    vertical-align: middle; }
   .edit form {
-    width: 50%; }
+    width: 25%; }
     .edit form h2 {
       font-weight: 400;
       text-transform: none;
@@ -69,4 +85,4 @@
       .edit form .btn-primary:hover {
         background-color: #fb9146; }
 
-/*# sourceMappingURL=register.component.css.map */
+/*# sourceMappingURL=email.component.css.map */

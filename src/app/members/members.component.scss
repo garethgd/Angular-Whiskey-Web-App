@@ -1,0 +1,74 @@
+#toolbar {
+  padding: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.basic-btn {
+  width: 100px;
+  margin: 0;
+  background: transparent;
+  color: orange;
+  padding: 5px;
+  position: absolute;
+  float: right;
+  right: 24px;
+  top: 9%;
+  margin-top: 20px;
+  border: 1px solid orange;
+
+  &:hover{
+      background:orange;
+      color:white;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1em;
+  left: 0;
+  right: 0;
+  top: 78%;
+}
+
+#page {
+  padding: 3em;
+  margin: 0;
+  background-image: url(../images/whiskey-backdrop.jpg);
+  background-size: cover;
+  min-height: 700px;
+}
+
+#page img {
+  margin-top: 30px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.form-container {
+  text-align: center;
+}
+
+span {
+  color: #fb9146;
+  font-size: 50px;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  #page {
+    padding: 1em;
+  }
+  #toolbar {
+    width: 90%;
+    margin-left: -45%;
+  }
+}

@@ -7,10 +7,11 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { ActionsRoutingModule } from './actions.routing';
+import { EmailComponent } from './email/email.component';
 
 @NgModule({
     imports: [BrowserModule, FormsModule, ActionsRoutingModule, ReactiveFormsModule],
-    declarations: [LoginComponent, RegisterComponent, ProfileComponent ],
+    declarations: [LoginComponent, RegisterComponent, ProfileComponent, EmailComponent ],
     exports: [LoginComponent, RegisterComponent, ProfileComponent ]
 })
 

@@ -1,32 +1,17 @@
- <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+<div class="edit">
+  <div class="form-container">
+    <span class="ion-ios-locked-outline" id="lock"> </span>
+    <span class="error" *ngIf="error">{{ error }}</span>
+    <div (click)="loginFb()" class="action-wrapper"><span class="ion-social-facebook"> </span>
+      <h1 >Login With Facebook</h1></div>
+      <div (click)="loginGoogle()" class="action-wrapper"><span class="ion-social-google"> </span>
+        <h1>Login With Google</h1></div>
+      <div (click)="loginTwitter()" class="action-wrapper"><span class="ion-social-twitter"> </span>
+        <h1 id="twitter">Login With Twitter</h1>
+      </div>
+      <div routerLink="/login-email" class="action-wrapper"><span class="ion-email"> </span>
+        <h1 >Email</h1>
+      </div>
+      <a routerLink="/register" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+    </div>
+  </div>
