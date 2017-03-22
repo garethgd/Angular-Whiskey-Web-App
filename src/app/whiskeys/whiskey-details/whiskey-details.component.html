@@ -1,4 +1,4 @@
-<div class="container" *ngIf="selectedWhiskey">
+<div [@moveInLeft]="state" class="container" *ngIf="selectedWhiskey">
   <div class="detail-img">
     <img src="{{ selectedWhiskey.imgsrc }}">
   </div>

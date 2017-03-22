@@ -3,7 +3,12 @@
   display: inline-block;
   padding: 20px;
   margin: 30px;
+  float: left;
   border: solid 1px #fb9146; }
+  @media (max-width: 800px) {
+    .container {
+      width: 100%;
+      margin: 5px; } }
 
 .desc {
   padding-left: 30px; }
@@ -13,7 +18,7 @@
     font-weight: 400;
     text-transform: none;
     margin-bottom: 20px;
-    font: 55px/24px 'Unica One', sans-serif;
+    font: 40px/24px 'Unica One', sans-serif;
     text-transform: uppercase;
     color: #c31;
     margin: 20px 20px 30px; }
@@ -32,5 +37,8 @@
 img {
   width: 250px;
   float: left; }
+  @media (max-width: 800px) {
+    img {
+      width: 40%; } }
 
 /*# sourceMappingURL=whiskey-details.component.css.map */

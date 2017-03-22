@@ -1,4 +1,4 @@
-<div class="edit">
+<div [@moveInLeft]="state" class="edit">
   <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
   <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
     <span class="ion-android-arrow-back"> </span><a routerLink="/login" id="goback">Go back</a>

@@ -1,13 +1,16 @@
 form {
   width: 35%;
   display: inline-block;
-  float: right;
+  margin-top: 10px;
   color: black; }
+  @media (max-width: 800px) {
+    form {
+      width: 100%;
+      margin: 10px; } }
   form h2 {
     font-weight: 400;
     text-transform: none;
     margin-bottom: 20px;
-    margin-top: 0;
     font: 36px/24px 'Unica One', sans-serif;
     text-transform: uppercase;
     color: #303030; }
@@ -15,7 +18,7 @@ form {
     font-weight: 400;
     text-transform: none;
     font: 16px 'Raleway', sans-serif;
-    color: white; }
+    color: black; }
   form input {
     font-weight: 400;
     text-transform: none;

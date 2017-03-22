@@ -1,4 +1,4 @@
-<div class="edit">
+<div [@moveInLeft]="state" class="edit">
   <form #formData='ngForm' [formGroup]="registrationForm" (ngSubmit)="onSubmit(formData)">
     <h2> Register </h2>
     <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>

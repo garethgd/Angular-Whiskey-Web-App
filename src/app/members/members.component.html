@@ -1,14 +1,31 @@
 <div class="form-container" id="toolbar">
-    <header [@fallIn]="state">
-    
-    </header>
-      
-    <div id="page" [@moveInLeft]="state">
-      <button (click)="logout()" class="basic-btn">Logout</button>
-       <span class="ion-ios-world"> </span>
-      <h2>Hey {{ name.auth.displayName }}! Welcome to your Whiskey Dashboard</h2>
-      
-      <img src="assets/images/filler.png" />
+  <header [@fallIn]="state">
+  </header>
+  <div id="page" [@moveInLeft]="state">
+    <button (click)="logout()" class="basic-btn">Logout</button>
+    <span class="ion-ios-world"> </span>
+    <h2>Hey {{ name.auth.displayName }}! Welcome to your Whiskey Dashboard</h2>
+    <div class="options">
+      <div>
+        <span class="ion-card"> </span>
+        <h1> Update Credit Card </h1>
+      </div>
+      <div>
+        <span class="ion-cash"> </span>
+        <h1> Previous Purchases </h1>
+      </div>
     </div>
-    
+    <div class="options">
+      <div>
+        <span class="ion-ios-wineglass-outline">
+          <h1>Latest Offers</h1>
+           </span>
+      </div>
+      <div>
+        <span class="ion-ios-pint-outline">
+         <h1> Catalogue</h1>
+           </span>
+      </div>
+    </div>
+  </div>
 </div>

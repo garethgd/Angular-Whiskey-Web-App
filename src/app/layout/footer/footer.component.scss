@@ -1,4 +1,7 @@
 // @import "../stylesheets/color.scss";
+.row {
+  margin: 0;
+}
 
 .foot_wrap {
   font-family: 'Unica One', cursive;
@@ -6,7 +9,6 @@
   text-transform: uppercase;
   text-align: center;
   padding: 20px 0px;
- 
 }
 
 .foot_wrap a {
@@ -15,11 +17,8 @@
   text-transform: uppercase;
   text-align: center;
   padding: 20px 0px;
- 
 }
 
 .dark-bg {
   background-color: #303030;
 }
-
-

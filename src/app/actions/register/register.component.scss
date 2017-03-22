@@ -6,6 +6,9 @@
   height: 100%;
   form {
     width: 50%;
+    @media (max-width: 800px) {
+      width:100%;
+    }
     h2 {
       font-weight: 400;
       text-transform: none;
@@ -14,6 +17,10 @@
       font: 36px/24px 'Unica One', sans-serif;
       text-transform: uppercase;
       color: #fb9146;
+      @media (max-width: 800px) {
+        margin-bottom: 50px;
+        text-align: center;
+      }
     }
     label {
       font-weight: 400;
@@ -45,7 +52,7 @@
       &.ng-touched {
         border: 3px solid #FF9347;
       }
-       &.ng-dirty.ng-valid {
+      &.ng-dirty.ng-valid {
         border: 1px solid #24CC7C;
       }
       &.ng-dirty {

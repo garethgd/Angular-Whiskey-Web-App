@@ -1,26 +1,21 @@
-<!--<router-outlet></router-outlet>-->
+
 <div class="header col-lg-12 dark-bg">
 
   <ul class="nav-contact">
-	   <!--<alert type="success">hello</alert>-->
-    <!--<button class="btn btn-primary" (click)="lgModal.show()"><li>Login</li>	</button>	-->
-	 <!--<button class="btn btn-primary" (click)="setWhiskeyName('jameson')">
-		 <li>Login</li>	</button>	-->
+	  
 
   </ul>
-<!--<button routerLink="/register" class="btn btn-primary" (click)="setWhiskeyName('jameson')">
-		 Register	</button>	-->
+
 
   
 
   <div class="container" >
    
-    <!--<input [(ngModel)]="whiskeyName" />
-	<input [(ngModel)]="currentUser.username" />-->
-    <nav>
+   
+    <nav id="navbar">
 
 
-      <ul class="nav-left">
+      <ul class="nav-left  hidden-xs ">
 
         <li>
 
@@ -30,15 +25,15 @@
 
         <li>
 
-          <a href="">Info</a>
+           <a [class.active] ="isActive('/home')" routerLink ="/home" href="">Info</a>
 
         </li>
 
         <li style="list-style: none"></li>
 
-      </ul><a class="logo" [class.active] ="isActive('/home')" routerLink ="/home" >Eposible</a>
+      </ul><a class="logo" >Eposible</a>
 
-      <ul class="nav-right">
+      <ul class="nav-right  hidden-xs">
 
         <li>
 
@@ -56,12 +51,62 @@
 
     </nav>
 
+
+<button type="button"class="btn btn-outline-primary visible-xs" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="menu-collapse">
+     <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+  </button>
+      
+
+      <div id="menu-collapse"  [ngbCollapse]="isCollapsed">
+   <nav id="navbar">
+
+
+      <ul class=" visible-xs nav-left">
+
+        <li [class.active-sm] ="isActive('/products')">
+
+          <a  routerLink ="/products" href="features.html">Products</a>
+
+        </li>
+
+        <li [class.active-sm] ="isActive('/home')">
+
+          <a  routerLink ="/home" href="">Info</a>
+
+        </li>
+
+      
+
+      </ul>
+
+      <ul class="visible-xs nav-right">
+
+        <li>
+
+          <a href="">About</a>
+
+        </li>
+
+        <li>
+
+          <a href="">Contact</a>
+
+        </li>
+
+      </ul>
+
+    </nav>
+</div>
   </div>
 <ul class="actions">
   <li class="nav-item dropdown"  [class.active] ="isActive('/register')">
  <span class= "ion-log-in"> </span>
   <a routerLink="/register"  class="nav-link dropdown-toggle" data-toggle="dropdown">Register</a></li>
-  <li> <span class= "ion-lock-combination"> </span> <a routerLink="/login"  class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a></li>
+  <li [class.active] ="isActive('/login')"> <span class= "ion-lock-combination"> </span> <a routerLink="/login"  class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a></li>
   
 </ul>
 </div>

@@ -3,13 +3,13 @@ import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
 import { RegistrationViewModel } from './registrationViewModel';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { Router } from '@angular/router';
-import { moveIn, fallIn } from '../../router.animations';
+import { moveIn, fallIn, moveInLeft } from '../../router.animations';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  animations: [moveIn(), fallIn()],
+  animations: [moveIn(), fallIn(), moveInLeft()],
   host: {'[@moveIn]': ''}
 })
 

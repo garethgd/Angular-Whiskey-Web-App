@@ -6,6 +6,9 @@
   height: 100%; }
   .edit form {
     width: 50%; }
+    @media (max-width: 800px) {
+      .edit form {
+        width: 100%; } }
     .edit form h2 {
       font-weight: 400;
       text-transform: none;
@@ -14,6 +17,10 @@
       font: 36px/24px 'Unica One', sans-serif;
       text-transform: uppercase;
       color: #fb9146; }
+      @media (max-width: 800px) {
+        .edit form h2 {
+          margin-bottom: 50px;
+          text-align: center; } }
     .edit form label {
       font-weight: 400;
       text-transform: none;

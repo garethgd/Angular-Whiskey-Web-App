@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,IAAK;EACH,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,YAAY",
-"sources": ["whiskey-edit.scss"],
-"names": [],
-"file": "whiskey-edit.css"
-}

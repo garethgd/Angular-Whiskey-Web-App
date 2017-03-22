@@ -5,7 +5,7 @@
 }
 
 #fb {
-  background: #3B5998 url('assets/images/facebook.svg') no-repeat 14px 6px;
+  background: #3B5998 url('/assets/images/facebook.svg') no-repeat 14px 6px;
   background-size: 47px;
   color: #fff;
 }
@@ -27,6 +27,9 @@ h1 {
 
 .form-container {
   width: 15%;
+     @media (max-width: 800px) {
+       width:100%;
+     }
   .action-wrapper {
     border: 1px solid #fb9146;
     padding: 10px 8px;
@@ -134,12 +137,12 @@ h1 {
 
 #google {
   border: 1px solid #95989A;
-  background: #fff url('assets/images/google.svg') no-repeat 25px;
+  background: #fff url('/assets/images/google.svg') no-repeat 25px;
   background-size: 25px;
 }
 
 #email {
-  background: #ECECEC url('assets/images/email.svg') no-repeat 25px;
+  background: #ECECEC url('/assets/images/email.svg') no-repeat 25px;
   background-size: 25px;
 }
 

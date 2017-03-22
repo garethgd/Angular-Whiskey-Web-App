@@ -6,7 +6,7 @@ import { ProfileComponent } from '../profile/profile.component'
 
 @NgModule({
         imports: [BrowserModule, FormsModule],
-        declarations: [ProfileComponent]
+        
     }
 )
 

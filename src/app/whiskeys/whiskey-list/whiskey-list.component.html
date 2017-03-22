@@ -4,7 +4,7 @@
 <app-whiskey-edit [selectedWhiskey] = "selectedWhiskey"> </app-whiskey-edit>
 
 
-<div  class="product-list">
+<div  [@moveInLeft]="state" class="product-list">
 
   <div *ngFor = "let whiskey of whiskeyCat" (click) = "setSelectedWhiskey(whiskey)" class="product">
 

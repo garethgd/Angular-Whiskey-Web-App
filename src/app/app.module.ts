@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { AppComponent } from './app.component';
 import { EmailComponent } from '././actions/email/email.component';
 import { LayoutModule } from './layout/layout.module';
@@ -14,7 +14,9 @@ import { ActionsModule } from './actions/actions.module';
 import { AppRoutingModule } from './app.routing';
 import { ActionsRoutingModule } from './actions/actions.routing';
 
-import { LoginModalComponent } from './login-modal/login-modal.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
@@ -45,7 +47,7 @@ export const firebaseConfig = {
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    AlertModule,
+    NgbModule,
     WhiskeysModule,
     ActionsModule,
     LayoutModule,

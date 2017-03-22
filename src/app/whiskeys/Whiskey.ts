@@ -4,7 +4,7 @@ export class Whiskey {
     origin: string = "Florida";
     distillery : string = "Jacksonville";
     desc : string = "An Oak that grew on the bank of a river was uprooted by a severe gale of wind, and thrown across the stream.";
-    imgsrc : string = "images/clontarf-whiskey.jpg";
+    imgsrc : string = "assets/clontarf-whiskey.jpg";
     rating: number = 0;
 
 

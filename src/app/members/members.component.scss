@@ -6,6 +6,31 @@ header {
   width: 100%;
 }
 
+.options {
+  div {
+    display: inline-block;
+    margin: 20px;
+    width: 400px;
+    /* background: #fb9146; */
+    background: #333;
+    border: 1px solid orange;
+    &:hover {
+      background: orange;
+      span {
+        color: white;
+      }
+    }
+    h1 {
+      font-family: 'Unica One', cursive;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 23px;
+      margin-top: 0;
+    }
+  }
+}
+
 .basic-btn {
   width: 100px;
   margin: 0;
@@ -18,10 +43,9 @@ header {
   top: 9%;
   margin-top: 20px;
   border: 1px solid orange;
-
-  &:hover{
-      background:orange;
-      color:white;
+  &:hover {
+    background: orange;
+    color: white;
   }
 }
 
@@ -40,7 +64,7 @@ h2 {
 #page {
   padding: 3em;
   margin: 0;
-  background-image: url(../images/whiskey-backdrop.jpg);
+  background-image: url(/assets/whiskey-backdrop.jpg);
   background-size: cover;
   min-height: 700px;
 }
@@ -58,7 +82,7 @@ h2 {
 }
 
 span {
-  color: #fb9146;
+  color: orange;
   font-size: 50px;
   vertical-align: middle;
 }
