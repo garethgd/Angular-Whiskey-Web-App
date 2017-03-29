@@ -10,9 +10,9 @@ header {
   width: 400px;
   /* background: #fb9146; */
   background: #333;
-  border: 1px solid orange; }
+  border: 1px solid #fb9146; }
   .options div:hover {
-    background: orange; }
+    background: #fb9146; }
     .options div:hover span {
       color: white; }
   .options div h1 {
@@ -27,16 +27,16 @@ header {
   width: 100px;
   margin: 0;
   background: transparent;
-  color: orange;
+  color: #fb9146;
   padding: 5px;
   position: absolute;
   float: right;
   right: 24px;
   top: 9%;
   margin-top: 20px;
-  border: 1px solid orange; }
+  border: 1px solid #fb9146; }
   .basic-btn:hover {
-    background: orange;
+    background: #fb9146;
     color: white; }
 
 h2 {
@@ -67,7 +67,7 @@ h2 {
   text-align: center; }
 
 span {
-  color: orange;
+  color: #fb9146;
   font-size: 50px;
   vertical-align: middle; }
 

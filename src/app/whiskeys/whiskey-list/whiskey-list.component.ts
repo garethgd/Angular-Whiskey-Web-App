@@ -14,7 +14,7 @@ import { moveIn, fallIn, moveInLeft } from '../../router.animations';
 export class WhiskeyListComponent implements OnInit {
   whiskeyCat: Whiskey[];
   selectedWhiskey : Whiskey;
-
+  state: string ='';
   constructor(private apiService: RestAPIService) { }
 
   ngOnInit() {
@@ -26,6 +26,8 @@ export class WhiskeyListComponent implements OnInit {
   {
     this.selectedWhiskey = selectedWhiskey;
   }
+
+  
 }
 
 

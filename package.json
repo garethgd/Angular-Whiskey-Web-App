@@ -9,17 +9,20 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot -prod",
+    "deploy": "git push origin master && git push heroku master"
+    
   },
   "private": true,
   "engines": {
-    "node": "7.0.0",
+     "node": "7.7.4",
     "npm": "4.4.1"
   },
   "dependencies": {
-    "@angular/cli": "^1.0.0-rc.2",
+     "@angular/cli": "^1.0.0",
    "@angular/common": "2.4.7",
     "@angular/compiler": "2.4.7",
+    "@angular/compiler-cli": "^2.4.10",
     "@angular/core": "2.4.7",
     "@angular/forms": "2.4.7",
     "@angular/http": "2.4.7",
@@ -38,14 +41,13 @@
     "express": "^4.15.2",
     "firebase": "^3.7.1",
     "ng2-bootstrap": "^1.4.0",
-    "rxjs": "5.0.0-beta.12",
+    "rxjs": "^5.1.0",
     "ts-helpers": "^1.1.1",
-    "typescript": "2.2.1",
+     "typescript": "^2.2.2",
     "zone.js": "^0.6.23"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.0-rc.4",
-    "@angular/compiler-cli": "4.0.0-rc.5",
+     
     "@types/core-js": "^0.9.34",
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
@@ -63,7 +65,7 @@
     "sass-loader": "^4.0.2",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
-    "typescript": "~2.0.3",
+     "typescript": "^2.2.2",
     "webdriver-manager": "10.2.5"
   }
 }

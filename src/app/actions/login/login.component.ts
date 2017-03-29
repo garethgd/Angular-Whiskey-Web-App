@@ -11,7 +11,7 @@ import { moveIn, fallIn, moveInLeft } from '../../router.animations';
   host: { '[@moveIn]': '' }
 })
 export class LoginComponent implements OnInit {
-
+  state: string ='';
   error: any;
   constructor(public af: AngularFire, private router: Router) {
     //IF authorised redirecto to members page

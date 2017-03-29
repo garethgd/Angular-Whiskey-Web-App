@@ -10,7 +10,7 @@ import { moveIn, fallIn, moveInLeft } from '../../router.animations';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
   animations: [moveIn(), fallIn(), moveInLeft()],
-  host: {'[@moveIn]': ''}
+  host: { '[@moveIn]': '' }
 })
 
 
@@ -18,18 +18,26 @@ export class RegisterComponent implements OnInit {
 
   registrationForm: FormGroup;
   registrationViewModel: RegistrationViewModel;
+
+
+  state: string = '';
+  error: any;
+
+  firstName: any;
+  lastName: any;
+  email: any;
+  address: any;
+  dob: any;
+  country: any;
+  password: any;
   
-
-    state: string ='';
-    error: any;
-
   constructor(
-    private fb: FormBuilder,
+    public fb: FormBuilder,
     public af: AngularFire,
-    private router: Router
+    public router: Router
   ) {
-    this.af.auth.subscribe(auth => { 
-      if(auth) {
+    this.af.auth.subscribe(auth => {
+      if (auth) {
         this.router.navigateByUrl('/members');
       }
     });
@@ -40,21 +48,21 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     this.buildForm();
   }
-onSubmit(formData) {
-    if(formData.valid) {
+  onSubmit(formData) {
+    if (formData.valid) {
       console.log(formData.value);
       this.af.auth.createUser({
         email: formData.value.email,
         password: formData.value.password
       }).then(
         (success) => {
-      
-        this.router.navigate(['/members'])
-      }).catch(
+
+          this.router.navigate(['/members'])
+        }).catch(
         (err) => {
-      
-        this.error = err;
-      })
+
+          this.error = err;
+        })
     }
   }
 
@@ -62,7 +70,7 @@ onSubmit(formData) {
     this.registrationViewModel = this.registrationForm.value;
     console.log(JSON.stringify(this.registrationViewModel));
   }
-  private buildForm() {
+  public buildForm() {
     this.registrationForm = this.fb.group({
       'firstName': ['', [Validators.required]],
       'lastName': ['', [Validators.required]],
@@ -76,7 +84,7 @@ onSubmit(formData) {
     this.registrationForm.valueChanges.subscribe(data => this.onValueChanged(data));
     this.onValueChanged();
   }
-  private onValueChanged(data?: any) {
+  public onValueChanged(data?: any) {
     if (!this.registrationForm) { return; }
 
     for (const property in this.formErrors) {
@@ -93,7 +101,7 @@ onSubmit(formData) {
       }
     }
   }
-  private formErrors = {
+  public formErrors = {
     'firstName': '',
     'lastName': '',
     'email': '',
@@ -102,7 +110,7 @@ onSubmit(formData) {
     'country': '',
     'password': ''
   };
-  private validateMessages = {
+  public validateMessages = {
     'firstName': {
       'required': 'First Name is Required.'
 

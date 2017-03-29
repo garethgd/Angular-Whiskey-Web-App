@@ -14,7 +14,8 @@ export class EmailComponent implements OnInit {
 
   state: string = '';
     error: any;
-
+    email : any;
+    password: any; 
     constructor(public af: AngularFire,private router: Router) {
     this.af.auth.subscribe(auth => { 
       if(auth) {
@@ -25,11 +26,11 @@ export class EmailComponent implements OnInit {
 
 
   onSubmit(formData) {
-    if(formData.valid) {
-      console.log(formData.value);
+    if(formData) {
+     
       this.af.auth.login({
-        email: formData.value.email,
-        password: formData.value.password
+        email: formData.value["email"],
+        password: formData.value["password"]
       },
       {
         provider: AuthProviders.Password,

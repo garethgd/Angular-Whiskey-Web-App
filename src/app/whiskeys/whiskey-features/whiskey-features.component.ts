@@ -10,7 +10,7 @@ import { moveIn, fallIn, moveInLeft } from '../../router.animations';
   host: { '[@moveIn]': '' }
 })
 export class WhiskeyFeaturesComponent implements OnInit {
-
+ state: string ='';
   constructor() { }
 
   ngOnInit() {
