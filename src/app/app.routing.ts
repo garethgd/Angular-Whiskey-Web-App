@@ -28,7 +28,7 @@ const routes: Routes = [
         component: EmailComponent 
     },
     {
-        path: 'home',
+        path: '',
         component: HomeComponent
     },
     {
