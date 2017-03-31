@@ -35,15 +35,14 @@
 
       <ul class="nav-right  hidden-xs">
 
-        <li>
+         <li>
 
-          <a href="">About</a>
-
+          <a  [class.active] ="isActive('/about')" routerLink ="/about">About</a>
         </li>
 
-        <li>
+        <li >
 
-          <a href="">Contact</a>
+          <a  [class.active] ="isActive('/contact')" routerLink ="/contact" href="">Contact</a>
 
         </li>
 
@@ -69,7 +68,7 @@
 
         <li [class.active-sm] ="isActive('/products')">
 
-          <a  routerLink ="/products" href="features.html">Products</a>
+          <a routerLink ="/products" href="features.html">Products</a>
 
         </li>
 
@@ -85,15 +84,15 @@
 
       <ul class="visible-xs nav-right">
 
-        <li>
+        <li [class.active-sm] ="isActive('/about')">
 
-          <a href="">About</a>
+          <a routerLink ="/about">About</a>
 
         </li>
 
-        <li>
+        <li [class.active-sm] ="isActive('/contact')">
 
-          <a href="">Contact</a>
+          <a  routerLink ="/contact">Contact</a>
 
         </li>
 

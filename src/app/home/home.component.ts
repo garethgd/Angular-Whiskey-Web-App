@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WhiskeysModule } from '../whiskeys/whiskeys.module';
+import { moveIn, fallIn, moveInLeft } from '../router.animations';
 
 @Component({
   selector: 'app-home',

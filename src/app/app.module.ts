@@ -23,6 +23,8 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { MembersComponent } from './members/members.component';
 import { AuthGuard } from '././auth/auth.service';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyA-gSKVNv4hbjk7WSO9qJV3hEWWJd_Zoug",
@@ -39,6 +41,8 @@ export const firebaseConfig = {
     HomeComponent,
     ProductsComponent,
     MembersComponent,
+    AboutComponent,
+    ContactComponent,
    
   ],
   imports: [

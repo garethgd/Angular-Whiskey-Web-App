@@ -7,7 +7,7 @@ import { moveIn, fallIn, moveInLeft } from '../../router.animations';
   templateUrl: './whiskey-features.component.html',
   styleUrls: ['./whiskey-features.component.css'],
   animations: [moveIn(), fallIn(), moveInLeft()],
-  host: { '[@moveIn]': '' }
+  host: { '[@fallIn]': '' }
 })
 export class WhiskeyFeaturesComponent implements OnInit {
  state: string ='';
