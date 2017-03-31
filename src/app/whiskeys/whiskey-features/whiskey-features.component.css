@@ -52,7 +52,7 @@
       transition: -webkit-transform 2s;
       opacity: 1; }
     .description .third:hover .overlay > div {
-      transform: translateX(50%);
+      transform: translateX(40%);
       transition: -webkit-transform 2s;
       opacity: 1; }
     .description .third:hover .overlay:before {
