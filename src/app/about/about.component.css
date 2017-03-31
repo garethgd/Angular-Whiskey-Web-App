@@ -9,7 +9,9 @@
   align-items: center;
   justify-content: center;
   padding: 40px 165px;
-  background-position-y: 30%; }
+  background-position-y: 30%;
+  height: 488px;
+  min-height: 576px; }
   .hero h3 {
     font-size: 40px; }
   .hero span {
