@@ -30,6 +30,10 @@ const routes: Routes = [
         component: EmailComponent 
     },
     {
+        path: '',
+        component: HomeComponent
+    },
+    {
         path: 'home',
         component: HomeComponent
     },
