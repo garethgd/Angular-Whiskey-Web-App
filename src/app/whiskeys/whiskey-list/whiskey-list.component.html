@@ -1,20 +1,19 @@
 
+
+
+
 <app-whiskey-details [selectedWhiskey] = "selectedWhiskey" > </app-whiskey-details>
 
-<app-whiskey-edit [selectedWhiskey] = "selectedWhiskey"> </app-whiskey-edit>
 
+<app-whiskey-edit [selectedWhiskey] = "selectedWhiskey"> </app-whiskey-edit>
 
 <div  [@moveInLeft]="state" class="product-list">
 
   <div *ngFor = "let whiskey of whiskeyCat" (click) = "setSelectedWhiskey(whiskey)" class="product">
 
     <img (click)="onClick($event)" id="{{ whiskey.imgsrc }}" src="{{ whiskey.imgsrc }}">
-
     <h1> {{whiskey.whiskeyName}} </h1>
-   
-
     <h1> ${{whiskey.price}} </h1>
-
     <p> {{whiskey.description}}  </p>
     <p> {{whiskey.rating}} </p>
     <span> <a (click) ="selectWhiskey(whiskey)" class ="ion-edit">  </a> </span>

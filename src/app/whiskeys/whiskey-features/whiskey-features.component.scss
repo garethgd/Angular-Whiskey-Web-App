@@ -157,7 +157,8 @@
 
 //HERO
 .hero {
-  background-image: url(/assets/whiskey-drop.jpg);
+  // background-image: url(/assets/whiskey-drop.jpg);
+      background: linear-gradient(0deg,rgba(251,145,70,.65),rgba(251,145,70,.65)),url(/assets/whiskey-drop.jpg);
   height: auto;
   width: 100%;
   background-size: cover;

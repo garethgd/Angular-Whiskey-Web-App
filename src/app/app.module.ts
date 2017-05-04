@@ -2,9 +2,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
+
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AppComponent } from './app.component';
 import { EmailComponent } from '././actions/email/email.component';
 import { LayoutModule } from './layout/layout.module';
@@ -57,6 +58,8 @@ export const firebaseConfig = {
     LayoutModule,
     ActionsRoutingModule,
     RouterModule,
+    LazyLoadImageModule,
+   
   AngularFireModule.initializeApp(firebaseConfig)
    
   ],

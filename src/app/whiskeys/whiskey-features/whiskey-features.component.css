@@ -126,7 +126,7 @@
   text-align: center; }
 
 .hero {
-  background-image: url(/assets/whiskey-drop.jpg);
+  background: linear-gradient(0deg, rgba(251, 145, 70, 0.65), rgba(251, 145, 70, 0.65)), url(/assets/whiskey-drop.jpg);
   height: auto;
   width: 100%;
   background-size: cover;

@@ -11,6 +11,13 @@ import { moveIn, fallIn, moveInLeft } from '../../router.animations';
 })
 export class WhiskeyFeaturesComponent implements OnInit {
  state: string ='';
+
+  images = [
+        'assets/whiskey-food.jpg',
+        'https://hd.unsplash.com/photo-1471109880861-75a04f9b7833',
+        'https://hd.unsplash.com/photo-1431400445088-1750c997c6b5'
+    ];
+
   constructor() { }
 
   ngOnInit() {
